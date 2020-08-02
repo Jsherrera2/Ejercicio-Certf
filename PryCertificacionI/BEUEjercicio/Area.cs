@@ -9,6 +9,7 @@
 
 namespace BEUEjercicio
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -30,6 +31,7 @@ namespace BEUEjercicio
         public string coordinador { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Materia> Materias { get; set; }
     }
 }

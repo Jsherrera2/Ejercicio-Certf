@@ -9,6 +9,7 @@
 
 namespace BEUEjercicio
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -52,6 +53,12 @@ namespace BEUEjercicio
         public string sexo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Matricula> Matriculas { get; set; }
+
+        public override string ToString()
+        {
+            return nombres + "" + apellidos;
+        }
     }
 }

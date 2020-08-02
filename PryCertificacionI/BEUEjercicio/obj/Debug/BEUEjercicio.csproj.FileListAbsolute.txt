@@ -14,10 +14,12 @@ C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\bin\
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\bin\Debug\BEUEjercicio.pdb
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\bin\Debug\EntityFramework.dll
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\bin\Debug\Newtonsoft.Json.dll
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\bin\Debug\EntityFramework.xml
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\obj\Debug\BEUEjercicio.csprojAssemblyReference.cache
+C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\bin\Debug\Newtonsoft.Json.xml
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\obj\Debug\BEUEjercicio.csproj.CoreCompileInputs.cache
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\obj\Debug\BEUEjercicio.csproj.CopyComplete
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\obj\Debug\BEUEjercicio.dll
 C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\obj\Debug\BEUEjercicio.pdb
+C:\Users\STALIN\source\repos\Ejercicio-Certf\PryCertificacionI\BEUEjercicio\obj\Debug\BEUEjercicio.csprojAssemblyReference.cache

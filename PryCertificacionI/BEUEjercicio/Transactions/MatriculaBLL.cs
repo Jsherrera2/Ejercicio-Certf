@@ -111,5 +111,12 @@ namespace BEUEjercicio.Transactions
             }
         }
 
+
+        public static List<Matricula> List(int id)
+        {
+            Entities db = new Entities();
+            return db.Matriculas.Where(x => x.Alumno.idalumno == id).ToList();
+        }
+
     }
 }

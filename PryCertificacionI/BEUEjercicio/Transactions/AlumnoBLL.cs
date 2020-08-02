@@ -98,6 +98,26 @@ namespace BEUEjercicio.Transactions
 
 
 
+        private static Alumno GetAlumno(string cedula)
+        {
+            Entities db = new Entities();
+            return db.Alumnoes.FirstOrDefault(x => x.cedula == cedula);
+        }
+
+        private static List<Alumno> GetAlumnos(string criterio)
+        {
+            //Ejemplo: criterio = 'quin'
+            //Posibles resultados => Quintana, Quintero, Pulloquinga, Quingaluisa...
+            Entities db = new Entities();
+            return db.Alumnoes.Where(x => x.apellidos.ToLower().Contains(criterio)).ToList();
+        }
+
+
+        public static List<Alumno> List(string criterio)
+        {
+            Entities db = new Entities();
+            return db.Alumnoes.Where(x => x.cedula.Contains(criterio)).ToList();
+        }
 
 
     }
