@@ -182,6 +182,7 @@
     <Compile Include="Controllers\AlumnoController.cs" />
     <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MaquinariaController.cs" />
     <Compile Include="Controllers\MateriaController.cs" />
     <Compile Include="Controllers\MatriculaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

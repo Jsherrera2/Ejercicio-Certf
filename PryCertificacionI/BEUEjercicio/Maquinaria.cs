@@ -12,14 +12,13 @@ namespace BEUEjercicio
     using System;
     using System.Collections.Generic;
     
-    public partial class Calificacion
+    public partial class Maquinaria
     {
-        public int idcalificacion { get; set; }
-        public string valor { get; set; }
-        public Nullable<System.DateTime> fecha { get; set; }
-        public string unidad { get; set; }
-        public Nullable<int> idmatricula { get; set; }
-    
-        public virtual Matricula Matricula { get; set; }
+        public int idmaquinaria { get; set; }
+        public string codigo { get; set; }
+        public string nombre { get; set; }
+        public Nullable<System.DateTime> fecha_adquisicion { get; set; }
+        public Nullable<decimal> precio { get; set; }
+        public Nullable<decimal> porcentaje_depreciacion { get; set; }
     }
 }

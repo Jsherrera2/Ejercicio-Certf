@@ -130,5 +130,17 @@
       <End Role="Materia" EntitySet="Materias" />
       <End Role="Matricula" EntitySet="Matriculas" />
     </AssociationSet>
+    <EntitySet Name="Maquinarias" EntityType="DBModel.Maquinaria" />
   </EntityContainer>
+  <EntityType Name="Maquinaria">
+    <Key>
+      <PropertyRef Name="idmaquinaria" />
+    </Key>
+    <Property Name="idmaquinaria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_adquisicion" Type="DateTime" Precision="0" />
+    <Property Name="precio" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="porcentaje_depreciacion" Type="Decimal" Precision="4" Scale="2" />
+  </EntityType>
 </Schema>

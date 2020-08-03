@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Alumno">
           <Key>
             <PropertyRef Name="idalumno" />
@@ -34,6 +34,17 @@
           <Property Name="fecha" Type="datetime" />
           <Property Name="unidad" Type="nchar" MaxLength="1" />
           <Property Name="idmatricula" Type="int" />
+        </EntityType>
+        <EntityType Name="Maquinaria">
+          <Key>
+            <PropertyRef Name="idmaquinaria" />
+          </Key>
+          <Property Name="idmaquinaria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="codigo" Type="varchar" MaxLength="25" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" />
+          <Property Name="fecha_adquisicion" Type="date" />
+          <Property Name="precio" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="porcentaje_depreciacion" Type="decimal" Precision="4" Scale="2" />
         </EntityType>
         <EntityType Name="Materia">
           <Key>
@@ -109,6 +120,7 @@
           <EntitySet Name="Alumno" EntityType="Self.Alumno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Calificacion" EntityType="Self.Calificacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Maquinaria" EntityType="Self.Maquinaria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Materia" EntityType="Self.Materia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Calificacion_Matricula" Association="Self.FK_Calificacion_Matricula">
@@ -128,8 +140,7 @@
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -263,7 +274,19 @@
             <End Role="Materia" EntitySet="Materias" />
             <End Role="Matricula" EntitySet="Matriculas" />
           </AssociationSet>
+          <EntitySet Name="Maquinarias" EntityType="DBModel.Maquinaria" />
         </EntityContainer>
+        <EntityType Name="Maquinaria">
+          <Key>
+            <PropertyRef Name="idmaquinaria" />
+          </Key>
+          <Property Name="idmaquinaria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codigo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_adquisicion" Type="DateTime" Precision="0" />
+          <Property Name="precio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="porcentaje_depreciacion" Type="Decimal" Precision="4" Scale="2" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -324,6 +347,18 @@
                 <ScalarProperty Name="tipo" ColumnName="tipo" />
                 <ScalarProperty Name="idmateria" ColumnName="idmateria" />
                 <ScalarProperty Name="idalumno" ColumnName="idalumno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Maquinarias">
+            <EntityTypeMapping TypeName="DBModel.Maquinaria">
+              <MappingFragment StoreEntitySet="Maquinaria">
+                <ScalarProperty Name="porcentaje_depreciacion" ColumnName="porcentaje_depreciacion" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="fecha_adquisicion" ColumnName="fecha_adquisicion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="idmaquinaria" ColumnName="idmaquinaria" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

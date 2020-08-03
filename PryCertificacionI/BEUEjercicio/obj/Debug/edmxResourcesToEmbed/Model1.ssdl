@@ -30,6 +30,17 @@
     <Property Name="unidad" Type="nchar" MaxLength="1" />
     <Property Name="idmatricula" Type="int" />
   </EntityType>
+  <EntityType Name="Maquinaria">
+    <Key>
+      <PropertyRef Name="idmaquinaria" />
+    </Key>
+    <Property Name="idmaquinaria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="varchar" MaxLength="25" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_adquisicion" Type="date" />
+    <Property Name="precio" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="porcentaje_depreciacion" Type="decimal" Precision="4" Scale="2" />
+  </EntityType>
   <EntityType Name="Materia">
     <Key>
       <PropertyRef Name="idmateria" />
@@ -104,6 +115,7 @@
     <EntitySet Name="Alumno" EntityType="Self.Alumno" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Calificacion" EntityType="Self.Calificacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maquinaria" EntityType="Self.Maquinaria" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Materia" EntityType="Self.Materia" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Calificacion_Matricula" Association="Self.FK_Calificacion_Matricula">
