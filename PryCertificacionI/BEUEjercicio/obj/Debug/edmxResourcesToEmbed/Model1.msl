@@ -70,5 +70,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Vinculacions">
+      <EntityTypeMapping TypeName="DBModel.Vinculacion">
+        <MappingFragment StoreEntitySet="Vinculacion">
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="numero_integrantes" ColumnName="numero_integrantes" />
+          <ScalarProperty Name="nombre_proyecto" ColumnName="nombre_proyecto" />
+          <ScalarProperty Name="numero_horas" ColumnName="numero_horas" />
+          <ScalarProperty Name="nombre_responsable" ColumnName="nombre_responsable" />
+          <ScalarProperty Name="nombre_organizacion" ColumnName="nombre_organizacion" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="idvinculacion" ColumnName="idvinculacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

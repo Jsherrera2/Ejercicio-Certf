@@ -63,6 +63,20 @@
     <Property Name="idmateria" Type="int" />
     <Property Name="idalumno" Type="int" />
   </EntityType>
+  <EntityType Name="Vinculacion">
+    <Key>
+      <PropertyRef Name="idvinculacion" />
+    </Key>
+    <Property Name="idvinculacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_inicio" Type="date" />
+    <Property Name="fecha_fin" Type="date" />
+    <Property Name="nombre_organizacion" Type="varchar" MaxLength="100" />
+    <Property Name="nombre_responsable" Type="varchar" MaxLength="100" />
+    <Property Name="numero_horas" Type="int" />
+    <Property Name="nombre_proyecto" Type="varchar" MaxLength="100" />
+    <Property Name="numero_integrantes" Type="int" />
+    <Property Name="ubicacion" Type="varchar" MaxLength="100" />
+  </EntityType>
   <Association Name="FK_Calificacion_Matricula">
     <End Role="Matricula" Type="Self.Matricula" Multiplicity="0..1" />
     <End Role="Calificacion" Type="Self.Calificacion" Multiplicity="*" />
@@ -118,6 +132,7 @@
     <EntitySet Name="Maquinaria" EntityType="Self.Maquinaria" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Materia" EntityType="Self.Materia" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vinculacion" EntityType="Self.Vinculacion" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Calificacion_Matricula" Association="Self.FK_Calificacion_Matricula">
       <End Role="Matricula" EntitySet="Matricula" />
       <End Role="Calificacion" EntitySet="Calificacion" />

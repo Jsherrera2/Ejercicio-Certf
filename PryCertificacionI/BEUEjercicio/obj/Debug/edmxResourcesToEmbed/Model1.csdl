@@ -131,6 +131,7 @@
       <End Role="Matricula" EntitySet="Matriculas" />
     </AssociationSet>
     <EntitySet Name="Maquinarias" EntityType="DBModel.Maquinaria" />
+    <EntitySet Name="Vinculacions" EntityType="DBModel.Vinculacion" />
   </EntityContainer>
   <EntityType Name="Maquinaria">
     <Key>
@@ -142,5 +143,19 @@
     <Property Name="fecha_adquisicion" Type="DateTime" Precision="0" />
     <Property Name="precio" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="porcentaje_depreciacion" Type="Decimal" Precision="4" Scale="2" />
+  </EntityType>
+  <EntityType Name="Vinculacion">
+    <Key>
+      <PropertyRef Name="idvinculacion" />
+    </Key>
+    <Property Name="idvinculacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+    <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+    <Property Name="nombre_organizacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_responsable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="numero_horas" Type="Int32" />
+    <Property Name="nombre_proyecto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="numero_integrantes" Type="Int32" />
+    <Property Name="ubicacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

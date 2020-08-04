@@ -9,20 +9,19 @@
 
 namespace BEUEjercicio
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
-    public partial class Calificacion
+    public partial class Vinculacion
     {
-        public int idcalificacion { get; set; }
-        public string valor { get; set; }
-        public Nullable<System.DateTime> fecha { get; set; }
-        public string unidad { get; set; }
-        public Nullable<int> idmatricula { get; set; }
-
-
-        [JsonIgnore]
-        public virtual Matricula Matricula { get; set; }
+        public int idvinculacion { get; set; }
+        public Nullable<System.DateTime> fecha_inicio { get; set; }
+        public Nullable<System.DateTime> fecha_fin { get; set; }
+        public string nombre_organizacion { get; set; }
+        public string nombre_responsable { get; set; }
+        public Nullable<int> numero_horas { get; set; }
+        public string nombre_proyecto { get; set; }
+        public Nullable<int> numero_integrantes { get; set; }
+        public string ubicacion { get; set; }
     }
 }

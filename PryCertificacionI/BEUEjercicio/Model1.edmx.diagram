@@ -15,6 +15,7 @@
         <AssociationConnector Association="DBModel.FK_Calificacion_Matricula" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Matricula_Materia" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DBModel.Maquinaria" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="DBModel.Vinculacion" Width="1.5" PointX="7.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
